@@ -15,7 +15,7 @@ function App() {
 
   // stuff do modala:
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImg, setSelectedImg] = useState(null);
 
 
 
@@ -58,38 +58,19 @@ function App() {
 
           {images.map(image => (
 
-            <ImageCard key={image.id} image={image} />
+            <ImageCard key={image.id} image={image} setSelectedImg={setSelectedImg} />
 
           ))}
 
 
-
-
-
-
-
         </div>
-
-
-
-
-
       }
-
-
 
       {/* modal */}
 
-
-
-      <Modal />
-
-
-
+      <Modal selectedImg={selectedImg} />
 
     </div>
-
-
 
   );
 }

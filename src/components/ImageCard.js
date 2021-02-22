@@ -1,4 +1,4 @@
-const ImageCard = ({ image }) => {
+const ImageCard = ({ image, setSelectedImg }) => {
 
 
     // zamieniamy string z tagami na array
@@ -7,7 +7,13 @@ const ImageCard = ({ image }) => {
 
     return (
 
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg"
+
+            // poniezej eksperymen z modalem:
+
+            onClick={() => setSelectedImg(image.webformatURL)}
+
+        >
 
             <img src={image.webformatURL} alt="" className="w-full" />
             <div className="px-6 py-4">
