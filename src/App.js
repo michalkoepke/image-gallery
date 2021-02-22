@@ -5,6 +5,7 @@ import Modal from "./components/Modal";
 
 function App() {
 
+  // stany , hooki, itd
 
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -13,11 +14,12 @@ function App() {
 
 
 
-  // stuff do modala:
+  // wybrany obrazek, stan do modala:
 
   const [selectedImg, setSelectedImg] = useState(null);
 
 
+  // useEffect czyli przeladuj strone jesli sie zmieni term(czyli fraza z wyszukiwania):
 
   useEffect(() => {
     fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&pretty=true`)
@@ -68,7 +70,7 @@ function App() {
 
       {/* modal */}
 
-      <Modal selectedImg={selectedImg} />
+      {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
 
     </div>
 
