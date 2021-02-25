@@ -10,7 +10,9 @@ const ImageCard = ({ image, setSelectedImg }) => {
 
     return (
 
-        <div className="max-w-sm rounded overflow-hidden shadow-lg"
+        <div className="max-w-md rounded overflow-hidden shadow-lg mx-auto"
+
+
 
             // poniezej eksperymen z modalem:
 
@@ -31,7 +33,17 @@ const ImageCard = ({ image, setSelectedImg }) => {
 
 
 
-                <img src={image.webformatURL} alt="" className="w-full opacity-80" />
+                <motion.img src={image.webformatURL} alt="" className="w-full opacity-80"
+
+
+                    // initial={{ opacity: 0 }}
+                    // animate={{ opacity: 0.7 }}
+                    // transition={{ delay: 1 }}
+
+                    whileHover={{ opacity: 1 }}
+
+
+                />
 
 
                 <div className="px-6 py-4">
