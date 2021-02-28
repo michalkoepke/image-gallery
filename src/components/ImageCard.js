@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
 
+
 const ImageCard = ({ image, setSelectedImg }) => {
 
 
