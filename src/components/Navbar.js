@@ -100,11 +100,11 @@ const Navbar = () => {
                 {isOpen &&
 
 
-                    <motion.ul
+                    <ul
 
-                        animate={isOpen ? "open" : "closed"}
-                        variants={variants}
-                        className="md:hidden w-full text-center text-bold mt-10 border-t-2 border-blue-900 md:border-none md-hidden">
+                        // animate={isOpen ? "open" : "closed"}
+                        // variants={variants}
+                        className="transition duration-500 ease-in-out translate-y-10 md:hidden w-full text-center text-bold mt-10 border-t-2 border-blue-900 md:border-none md-hidden">
 
 
                         <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
@@ -113,7 +113,7 @@ const Navbar = () => {
                         <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
 
 
-                    </motion.ul>
+                    </ul>
 
 
                 }

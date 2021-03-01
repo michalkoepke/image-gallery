@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Footer from "./components/Footer";
 import ImageCard from "./components/ImageCard";
 import ImageSearch from "./components/ImageSearch";
 import Modal from "./components/Modal";
@@ -85,6 +86,8 @@ function App() {
         {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
 
       </div>
+
+      <Footer />
 
 
 
