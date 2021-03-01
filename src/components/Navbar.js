@@ -13,7 +13,7 @@ const Navbar = () => {
 
 
 
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
 
     const handleNavCollapse = () => {
@@ -107,13 +107,12 @@ const Navbar = () => {
                         className="md:hidden w-full text-center text-bold mt-10 border-t-2 border-blue-900 md:border-none md-hidden">
 
 
-
-
-
                         <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
                         <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
                         <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
                         <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
+
+
                     </motion.ul>
 
 
