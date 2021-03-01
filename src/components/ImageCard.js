@@ -28,12 +28,6 @@ const ImageCard = ({ image, setSelectedImg }) => {
             <div className="opacity-80">
 
 
-
-
-
-
-
-
                 <motion.img src={image.webformatURL} alt="" className="w-full opacity-80"
 
 
@@ -77,19 +71,6 @@ const ImageCard = ({ image, setSelectedImg }) => {
                         </span>
 
                     ))}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 </div>
 
