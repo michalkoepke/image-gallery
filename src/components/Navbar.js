@@ -1,19 +1,44 @@
 import { useState } from "react";
-import { motion } from 'framer-motion';
+import '../assets/style.css';
 
 import logo from '../logo_photo.svg';
+
+
 
 const Navbar = () => {
 
 
-    const variants = {
-        open: { opacity: 1, x: 0 },
-        closed: { opacity: 0, x: "-100%" },
-    }
+
 
 
 
     const [isOpen, setIsOpen] = useState(false);
+
+    // eksperyment:
+
+
+    // const classChange = () => {
+
+    //     // className={isOpen ? "shown" : "hidden"}
+
+    //     if (isOpen) {
+
+    //         className = "shown"
+
+    //     } else {
+
+    //         className = "hidden"
+
+    //     }
+
+    // }
+
+
+
+
+
+
+
 
 
     const handleNavCollapse = () => {
@@ -58,7 +83,7 @@ const Navbar = () => {
 
                 <div className="flex items-center">
 
-                    <img src={logo} alt="ACME" width="40" />
+                    <img src={logo} alt="LOGO" width="40" />
                     <h1 className="font-bold text-3xl ml-2">PIXY</h1>
 
                 </div>
@@ -97,14 +122,16 @@ const Navbar = () => {
 
                 {/* links - dropped down */}
 
-                {isOpen &&
 
 
-                    <ul
+                {/* ponizej wyprobuj set timeout! */}
 
-                        // animate={isOpen ? "open" : "closed"}
-                        // variants={variants}
-                        className="transition duration-500 ease-in-out translate-y-10 md:hidden w-full text-center text-bold mt-10 border-t-2 border-blue-900 md:border-none md-hidden">
+                <div className={isOpen ? "shown" : "hidden"}>
+
+
+
+
+                    <ul>
 
 
                         <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
@@ -116,7 +143,11 @@ const Navbar = () => {
                     </ul>
 
 
-                }
+                </div>
+
+
+
+
 
 
 
@@ -130,7 +161,7 @@ const Navbar = () => {
             </nav>
 
 
-        </div>
+        </div >
 
 
 

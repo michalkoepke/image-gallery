@@ -27,7 +27,7 @@ const ImageSearch = ({ searchText }) => {
 
                         type="text" placeholder="Search image term..." />
 
-                    <button className="flex-shrink-0 bg-green-500 hover:bg-green-700 border-green-500 hover:border-green-700 text-sm border-4 py-1 px-2 rounded text-white" type="Submit">Search</button>
+                    <button className="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 py-1 px-2 rounded text-white" type="Submit">Search</button>
 
 
                 </div>
