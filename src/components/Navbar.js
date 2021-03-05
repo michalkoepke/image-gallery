@@ -12,30 +12,39 @@ const Navbar = () => {
 
 
 
+
     const [isOpen, setIsOpen] = useState(false);
 
     // eksperyment:
 
 
-    // const classChange = () => {
+    const pokazuj = () => {
 
-    //     // className={isOpen ? "shown" : "hidden"}
 
-    //     if (isOpen) {
+        setTimeout(() => {
 
-    //         className = "shown"
 
-    //     } else {
+            console.log('funtion fired');
+            return "pokaz";
 
-    //         className = "hidden"
 
-    //     }
+
+        }, 500);
+
+    }
+
+
+    // const hidden = () => {
+
+
+
+
+    //     console.log('hidden');
+    //     return "hidden"
+
+
 
     // }
-
-
-
-
 
 
 
@@ -126,24 +135,6 @@ const Navbar = () => {
 
                 {/* ponizej wyprobuj set timeout! */}
 
-                <div className={isOpen ? "shown" : "hidden"}>
-
-
-
-
-                    <ul>
-
-
-                        <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
-                        <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
-                        <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
-                        <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
-
-
-                    </ul>
-
-
-                </div>
 
 
 
@@ -160,6 +151,33 @@ const Navbar = () => {
 
             </nav>
 
+            {/* oryginal */}
+            {/* <div className={isOpen ? "pokaz" : "zchowaj"}></div> */}
+
+
+
+
+
+
+            <div className={isOpen ? pokazuj() : "zchowaj block self-end"} >
+                {/* <div className={zmienna()}> */}
+
+
+
+
+                <ul>
+
+
+                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
+                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
+                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
+                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
+
+
+                </ul>
+
+
+            </div>
 
         </div >
 
@@ -169,5 +187,6 @@ const Navbar = () => {
 
     );
 }
+
 
 export default Navbar;
