@@ -13,8 +13,10 @@ const menu = {
     hidden: {
 
         // y: -"100vh",
+        overflow: "hidden",
         height: "0px",
-        // opacity: 0,
+        opacity: 0
+        // transition: { delay: 0.5 }
 
     },
 
@@ -22,9 +24,8 @@ const menu = {
 
         // y: "150px",
         height: "200px",
-        // opacity: 1
+        opacity: 1
 
-        // transition: { delay: 0.5 }
 
     }
 
