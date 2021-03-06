@@ -3,6 +3,34 @@ import '../assets/style.css';
 
 import logo from '../logo_photo.svg';
 
+import { motion, AnimatePresence } from "framer-motion";
+
+
+
+const menu = {
+
+
+    hidden: {
+
+        // y: -"100vh",
+        height: "0px",
+        // opacity: 0,
+
+    },
+
+    visible: {
+
+        // y: "150px",
+        height: "200px",
+        // opacity: 1
+
+        // transition: { delay: 0.5 }
+
+    }
+
+}
+
+
 
 
 const Navbar = () => {
@@ -14,40 +42,6 @@ const Navbar = () => {
 
 
     const [isOpen, setIsOpen] = useState(false);
-
-    // eksperyment:
-
-
-    const pokazuj = () => {
-
-
-        setTimeout(() => {
-
-
-            console.log('funtion fired');
-            return "pokaz";
-
-
-
-        }, 500);
-
-    }
-
-
-    // const hidden = () => {
-
-
-
-
-    //     console.log('hidden');
-    //     return "hidden"
-
-
-
-    // }
-
-
-
 
 
     const handleNavCollapse = () => {
@@ -158,9 +152,11 @@ const Navbar = () => {
 
 
 
+            {/* ponizej nie kasowac - to wersja ze zmianami klas */}
 
-            <div className={isOpen ? pokazuj() : "zchowaj block self-end"} >
-                {/* <div className={zmienna()}> */}
+
+            {/* <div className={isOpen ? "pokaz" : "zchowaj block self-end"} >
+                
 
 
 
@@ -177,7 +173,57 @@ const Navbar = () => {
                 </ul>
 
 
-            </div>
+            </div> */}
+
+            {/* aternatuwna wersja z conditional rendering: */}
+
+
+
+            <AnimatePresence>
+
+
+                {isOpen && (
+
+
+
+                    <motion.div
+
+                        variants={menu}
+
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+
+
+
+                    >
+
+                        <ul>
+
+
+                            <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
+                            <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
+                            <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
+                            <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
+
+
+                        </ul>
+
+
+                    </motion.div>
+
+                )}
+
+
+
+            </AnimatePresence>
+
+
+
+
+
+
+
 
         </div >
 
