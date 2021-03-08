@@ -1,7 +1,7 @@
 import { useState } from "react";
 import '../assets/style.css';
 
-import logo from '../logo_photo.svg';
+import logo from '../pixy-logo-white.svg';
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -75,60 +75,7 @@ const Navbar = () => {
 
     return (
 
-
-        <div className="container mx-auto mt-4">
-
-
-
-
-            <nav className="flex flex-wrap items-center justify-between p-5 bg-white">
-
-                {/* logo */}
-
-                <div className="flex items-center">
-
-                    <img src={logo} alt="LOGO" width="40" />
-                    <h1 className="font-bold text-3xl ml-2">PIXY</h1>
-
-                </div>
-
-
-
-                {/* hamburger menu */}
-
-                <div className="flex md:hidden">
-
-                    {/* toggler button */}
-
-
-
-                    <button onClick={handleNavCollapse} id="hamburger">
-                        <img className="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
-                        <img className="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
-                    </button>
-
-
-
-                </div>
-
-
-
-                {/* links */}
-
-
-                <ul className="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
-                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
-                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
-                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
-                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
-                </ul>
-
-
-                {/* links - dropped down */}
-
-
-
-                {/* ponizej wyprobuj set timeout! */}
+        <div className="bg-custom-light mt-0">
 
 
 
@@ -136,6 +83,59 @@ const Navbar = () => {
 
 
 
+            <div className="container mx-auto mt-0 bg-custom-light text-white">
+
+
+
+
+                <nav className="flex flex-wrap items-center justify-between p-5 bg-custom-light text-white">
+
+                    {/* logo */}
+
+                    <div className="flex items-center">
+
+                        <img src={logo} alt="LOGO" width="150" />
+                        {/* <h1 className="font-bold text-3xl ml-2">PIXY</h1> */}
+
+                    </div>
+
+
+
+                    {/* hamburger menu */}
+
+                    <div className="flex md:hidden">
+
+                        {/* toggler button */}
+
+
+
+                        <button onClick={handleNavCollapse} id="hamburger">
+                            <img className="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
+                            <img className="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
+                        </button>
+
+
+
+                    </div>
+
+
+
+                    {/* links */}
+
+
+                    <ul className="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
+                        <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
+                        <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
+                        <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
+                        <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
+                    </ul>
+
+
+                    {/* links - dropped down */}
+
+
+
+                    {/* ponizej wyprobuj set timeout! */}
 
 
 
@@ -144,19 +144,26 @@ const Navbar = () => {
 
 
 
-            </nav>
-
-            {/* oryginal */}
-            {/* <div className={isOpen ? "pokaz" : "zchowaj"}></div> */}
 
 
 
 
 
-            {/* ponizej nie kasowac - to wersja ze zmianami klas */}
 
 
-            {/* <div className={isOpen ? "pokaz" : "zchowaj block self-end"} >
+                </nav>
+
+                {/* oryginal */}
+                {/* <div className={isOpen ? "pokaz" : "zchowaj"}></div> */}
+
+
+
+
+
+                {/* ponizej nie kasowac - to wersja ze zmianami klas */}
+
+
+                {/* <div className={isOpen ? "pokaz" : "zchowaj block self-end"} >
                 
 
 
@@ -176,57 +183,62 @@ const Navbar = () => {
 
             </div> */}
 
-            {/* aternatuwna wersja z conditional rendering: */}
+                {/* aternatuwna wersja z conditional rendering: */}
 
 
 
-            <AnimatePresence>
+                <AnimatePresence>
 
 
-                {isOpen && (
-
-
-
-                    <motion.div
-
-                        variants={menu}
-
-                        initial="hidden"
-                        animate="visible"
-                        exit="hidden"
+                    {isOpen && (
 
 
 
-                    >
+                        <motion.div
 
-                        <ul>
+                            variants={menu}
 
-
-                            <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
-                            <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
-                            <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
-                            <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
-
-
-                        </ul>
-
-
-                    </motion.div>
-
-                )}
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
 
 
 
-            </AnimatePresence>
+                        >
+
+                            <ul className="px-4">
+
+
+                                <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-white md:border-none">Home</a></li>
+                                <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-white md:border-none">Products</a></li>
+                                <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-white md:border-none">Pricing</a></li>
+                                <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-white md:border-none">Contact</a></li>
+
+
+                            </ul>
+
+
+                        </motion.div>
+
+                    )}
 
 
 
-
+                </AnimatePresence>
 
 
 
 
-        </div >
+
+
+
+
+            </div >
+
+
+        </div>
+
+
 
 
 

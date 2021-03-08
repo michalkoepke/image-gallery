@@ -8,7 +8,7 @@ const Footer = () => {
 
 
         <div className="mt-20">
-            <footer className="bg-gray-700">
+            <footer className="bg-custom">
 
                 <div className="container w-5/6 md:w-3/4  mx-auto flex flex-row flex-wrap justify-between py-20 text-white">
 
@@ -84,7 +84,7 @@ const Footer = () => {
             </footer>
 
 
-            <div className="bg-gray-900 text-gray-500" >
+            <div className="bg-custom-dark text-gray-500" >
 
 
                 <div className="container container-sm mx-auto py-4 text-center">
