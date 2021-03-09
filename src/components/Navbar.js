@@ -1,7 +1,7 @@
 import { useState } from "react";
 import '../assets/style.css';
 
-import logo from '../pixy-logo-white.svg';
+import logo from '../pixy-logo-color.svg';
 import burger from '../burger.svg';
 import burgerClose from '../burger-close.svg';
 
@@ -100,7 +100,7 @@ const Navbar = () => {
                     <div className="flex items-center">
 
                         <img src={logo} alt="LOGO" width="130" onClick={() => scroll.scrollToTop()} />
-                        <p className="text-gray-300 ml-8 hidden md:block">Simple image viewer</p>
+                        <p className="text-turkus-light ml-2 hidden md:block">Simple image viewer</p>
 
                     </div>
 
@@ -142,9 +142,9 @@ const Navbar = () => {
 
 
                     <ul className="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 md:border-none">
-                        <li className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 md:border-none" onClick={() => scroll.scrollToTop()}>Home</li>
-                        <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 md:border-none">About</Link></li>
-                        <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 md:border-none">Contact</Link></li>
+                        <li className="block md:inline-block text-white hover:text-turkus-light px-6 py-3 md:border-none" onClick={() => scroll.scrollToTop()}>Home</li>
+                        <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-white hover:text-turkus-light px-6 py-3 md:border-none">About</Link></li>
+                        <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-white hover:text-turkus-light px-6 py-3 md:border-none">Contact</Link></li>
 
                     </ul>
 
@@ -152,28 +152,11 @@ const Navbar = () => {
                     {/* links - dropped down */}
 
 
-
-                    {/* ponizej wyprobuj set timeout! */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </nav>
 
 
 
-                {/* aternatuwna wersja z conditional rendering: */}
+                {/* menu rozwijane - framer motion! */}
 
 
 
@@ -199,8 +182,8 @@ const Navbar = () => {
                             <ul className="px-4">
 
 
-                                <li className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 border-b-2 border-white md:border-none" onClick={() => scroll.scrollToTop()}>Home</li>
-                                <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 border-b-2 border-white md:border-none">About</Link></li>
+                                <li className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 border-b-2 border-white border-opacity-30 md:border-none" onClick={() => scroll.scrollToTop()}>Home</li>
+                                <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 border-b-2 border-white border-opacity-30 md:border-none">About</Link></li>
                                 <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 md:border-none">Contact</Link></li>
 
 

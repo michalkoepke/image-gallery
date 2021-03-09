@@ -1,5 +1,5 @@
 import '../assets/style.css';
-import logo from '../pixy-logo-white.svg';
+import logo from '../pixy-logo-color.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -25,7 +25,7 @@ const Footer = () => {
                     <div className="max-w-md mb-10">
 
 
-                        <img src={logo} alt="LOGO" width="130" />
+                        <img src={logo} alt="LOGO" width="130" className="hidden md:block" />
 
 
 
@@ -53,7 +53,7 @@ const Footer = () => {
 
                             <div className="flex flex-row items-center mt-12">
 
-                                <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                                <FontAwesomeIcon icon={faEnvelope} size="lg" className="text-turkus-light" />
                                 <p className="text-gray-300 ml-4">michalkoepke@gmail.com</p>
 
                             </div>
@@ -66,7 +66,7 @@ const Footer = () => {
 
                                 <div className="flex flex-row items-center mt-4">
 
-                                    <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                                    <FontAwesomeIcon icon={faLinkedin} size="lg" className="text-turkus-light" />
                                     <p className="text-gray-300 ml-5">LinkedIn</p>
 
                                 </div>

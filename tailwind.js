@@ -30,6 +30,12 @@ module.exports = {
         light: '#7952B3',
         DEFAULT: '#52387A',
         dark: '#2E2147'
+      },
+
+      turkus: {
+        light: '#40e8f4',
+        DEFAULT: '#00bcd4',
+        dark: '#008e99'
       }
     },
     spacing: {
