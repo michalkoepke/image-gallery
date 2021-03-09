@@ -25,7 +25,7 @@ const ImageCard = ({ image, setSelectedImg }) => {
 
 
 
-            <div className="opacity-80">
+            <div>
 
 
                 <motion.img src={image.webformatURL} alt="" className="w-full opacity-80"

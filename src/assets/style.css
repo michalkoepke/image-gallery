@@ -1,9 +1,9 @@
 .special-link:hover {
     background-color: #f3f4f6;
     color: #111827;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     border-radius: 3px;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .zchowaj {

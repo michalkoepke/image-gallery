@@ -2,8 +2,13 @@ import { useState } from "react";
 import '../assets/style.css';
 
 import logo from '../pixy-logo-white.svg';
+import burger from '../burger.svg';
+import burgerClose from '../burger-close.svg';
 
 import { motion, AnimatePresence } from "framer-motion";
+
+import { Link } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 
 
 
@@ -75,7 +80,7 @@ const Navbar = () => {
 
     return (
 
-        <div className="bg-custom-light mt-0">
+        <div className="from-custom to-custom-light bg-gradient-to-r mt-0 sticky top-0 z-30">
 
 
 
@@ -83,19 +88,19 @@ const Navbar = () => {
 
 
 
-            <div className="container mx-auto mt-0 bg-custom-light text-white">
+            <div className="container mx-auto mt-0  text-white">
 
 
 
 
-                <nav className="flex flex-wrap items-center justify-between p-5 bg-custom-light text-white">
+                <nav className="flex flex-wrap items-center justify-between p-5  text-white">
 
                     {/* logo */}
 
                     <div className="flex items-center">
 
-                        <img src={logo} alt="LOGO" width="150" />
-                        {/* <h1 className="font-bold text-3xl ml-2">PIXY</h1> */}
+                        <img src={logo} alt="LOGO" width="130" />
+                        <p className="text-gray-300 ml-8 hidden md:block">Simple image viewer</p>
 
                     </div>
 
@@ -109,10 +114,23 @@ const Navbar = () => {
 
 
 
-                        <button onClick={handleNavCollapse} id="hamburger">
-                            <img className="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
-                            <img className="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
+                        <button onClick={handleNavCollapse} id="hamburger" className="outline-none">
+
+                            {/* <img className="toggle block" src={burger} width="30" height="30" />
+                            <img className="toggle hidden" src={burgerClose} width="30" height="30" /> */}
+
+                            {/* eksperyment */}
+
+
+                            <img className="toggle block outline-none" src={(isOpen ? burgerClose : burger)} width="30" height="30" />
+
+
+
                         </button>
+
+
+
+
 
 
 
@@ -123,11 +141,11 @@ const Navbar = () => {
                     {/* links */}
 
 
-                    <ul className="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
-                        <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
-                        <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
-                        <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
-                        <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
+                    <ul className="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 md:border-none">
+                        <li className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 md:border-none" onClick={() => scroll.scrollToTop()}>Home</li>
+                        <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 md:border-none">About</Link></li>
+                        <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 md:border-none">Contact</Link></li>
+
                     </ul>
 
 
@@ -153,35 +171,7 @@ const Navbar = () => {
 
                 </nav>
 
-                {/* oryginal */}
-                {/* <div className={isOpen ? "pokaz" : "zchowaj"}></div> */}
 
-
-
-
-
-                {/* ponizej nie kasowac - to wersja ze zmianami klas */}
-
-
-                {/* <div className={isOpen ? "pokaz" : "zchowaj block self-end"} >
-                
-
-
-
-
-                <ul>
-
-
-                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home</a></li>
-                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products</a></li>
-                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Pricing</a></li>
-                    <li><a href="#" className="block md:inline-block text-blue-900 hover:text-blue-500 px-3 py-3 border-b-2 border-blue-900 md:border-none">Contact</a></li>
-
-
-                </ul>
-
-
-            </div> */}
 
                 {/* aternatuwna wersja z conditional rendering: */}
 
@@ -209,10 +199,10 @@ const Navbar = () => {
                             <ul className="px-4">
 
 
-                                <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-white md:border-none">Home</a></li>
-                                <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-white md:border-none">Products</a></li>
-                                <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-white md:border-none">Pricing</a></li>
-                                <li><a href="#" className="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-b-2 border-white md:border-none">Contact</a></li>
+                                <li className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 border-b-2 border-white md:border-none" onClick={() => scroll.scrollToTop()}>Home</li>
+                                <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 border-b-2 border-white md:border-none">About</Link></li>
+                                <li><Link to="footer" smooth={true} duration={1000} className="block md:inline-block text-gray-300 hover:text-white px-3 py-3 md:border-none">Contact</Link></li>
+
 
 
                             </ul>

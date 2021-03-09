@@ -29,10 +29,11 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
 
         >
 
-            <motion.img className="block max-w-screen-lg max-h-full my-40 m-auto shadow border-2 border-white" src={selectedImg} alt="enlarged pic"
+            <motion.img className="block max-w-sm md:max-w-2xl max-h-full my-20 md:my-40 m-auto shadow border-2 border-white" src={selectedImg} alt="enlarged pic"
 
                 initial={{ y: "-100vh" }}
                 animate={{ y: 0 }}
+
 
             />
         </motion.div>
