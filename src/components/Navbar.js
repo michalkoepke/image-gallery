@@ -99,7 +99,7 @@ const Navbar = () => {
 
                     <div className="flex items-center">
 
-                        <img src={logo} alt="LOGO" width="130" />
+                        <img src={logo} alt="LOGO" width="130" onClick={() => scroll.scrollToTop()} />
                         <p className="text-gray-300 ml-8 hidden md:block">Simple image viewer</p>
 
                     </div>
