@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/image-gallery/static/css/main.3a26a04e.chunk.css",
+    "main.js": "/image-gallery/static/js/main.cf30852a.chunk.js",
+    "main.js.map": "/image-gallery/static/js/main.cf30852a.chunk.js.map",
+    "runtime-main.js": "/image-gallery/static/js/runtime-main.43705862.js",
+    "runtime-main.js.map": "/image-gallery/static/js/runtime-main.43705862.js.map",
+    "static/js/2.94ffeb4e.chunk.js": "/image-gallery/static/js/2.94ffeb4e.chunk.js",
+    "static/js/2.94ffeb4e.chunk.js.map": "/image-gallery/static/js/2.94ffeb4e.chunk.js.map",
+    "index.html": "/image-gallery/index.html",
+    "static/css/main.3a26a04e.chunk.css.map": "/image-gallery/static/css/main.3a26a04e.chunk.css.map",
+    "static/js/2.94ffeb4e.chunk.js.LICENSE.txt": "/image-gallery/static/js/2.94ffeb4e.chunk.js.LICENSE.txt",
+    "static/media/burger-close.1db914a9.svg": "/image-gallery/static/media/burger-close.1db914a9.svg",
+    "static/media/burger.bb2a9ab6.svg": "/image-gallery/static/media/burger.bb2a9ab6.svg",
+    "static/media/pixy-logo-color.95ea0664.svg": "/image-gallery/static/media/pixy-logo-color.95ea0664.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43705862.js",
+    "static/js/2.94ffeb4e.chunk.js",
+    "static/css/main.3a26a04e.chunk.css",
+    "static/js/main.cf30852a.chunk.js"
+  ]
+}
