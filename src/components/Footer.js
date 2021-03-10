@@ -31,7 +31,7 @@ const Footer = () => {
 
                         {/* <h1 className="my-2 text-2xl">PIXY App</h1> */}
 
-                        <p className="mt-10 light-text-1 text-gray-300">A simple React app I have made in process
+                        <p className="mt-10 light-text-1 text-gray-300">Pixy - simple React app I have made in process
                         of learning JavaScript, React and Tailwind Css.
                         Backend provided by Pixabay.
 
