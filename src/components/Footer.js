@@ -1,5 +1,5 @@
 import '../assets/style.css';
-import logo from '../pixy-logo-color.svg';
+import logo from '../pixy-logo-proper.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'

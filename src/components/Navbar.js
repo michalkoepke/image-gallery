@@ -1,7 +1,7 @@
-import { useState } from "react";
 import '../assets/style.css';
+import { useState } from "react";
 
-import logo from '../pixy-logo-color.svg';
+import logo from '../pixy-logo-proper.svg';
 import burger from '../burger.svg';
 import burgerClose from '../burger-close.svg';
 
